@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+
+:root {
+    --prycyan: hsl(193, 38%, 86%);
+    --prygreen: hsl(150, 100%, 66%);
+    --neublue: hsl(217, 19%, 38%);
+    --neugrayblue: hsl(217, 19%, 24%);
+    --neudarkblue: hsl(218, 23%, 16%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--neudarkblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 50px 0px 10px;
+}
+
+#advice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 1px 40px;
+    width: 100%;
+}
+
+.advice {
+    width: 95%;
+    margin: 0px auto;
+    padding: 25px 15px 50px;
+    background-color: var(--neugrayblue);
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.advice__title {
+    color: var(--prygreen);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+}
+
+.advice__text {
+    margin: 25px 0px;
+    color: white;
+    font-size: 28px;
+}
+
+.advice h2 + img + img:last-of-type {
+    display: none;
+}
+
+.advice__dice {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background-color: var(--prygreen);
+    position: absolute;
+    left: 42.5%;
+    bottom: -25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advice__dice:hover img {
+    animation: spin 1s linear;
+}
+
+@keyframes spin { 100% { transform:rotate(360deg); } }
+
+.advice__dice:disabled {
+    opacity: 0.7;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.download {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--prygreen);
+    color: rgb(56, 55, 55);
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 50px;
+    padding: 15px 25px;
+}
+
+.attribution {
+    /* margin-top: auto; */
+    margin-top: 100px;
+    font-size: 12px; 
+    text-align: center; 
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: white;
+}
+
+.attribution a { 
+    color: var(--prygreen); 
+}
+
+.credit {
+    color: var(--prygreen);
+    font-size: 12px;
+    /* padding: 0px 0px 0px 0px;
+    margin-top: -25px;
+    margin-right: 0px;
+    z-index: 10;
+    letter-spacing: 3px; */
+    padding: 0px 15px;
+    margin-top: -30px;
+    margin-right: 25px;
+    align-self: flex-end;
+    z-index: 10;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    column-gap: 5px;
+}
+
+/* @media screen and (max-width: 375px) {
+   
+        .credit {
+            color: var(--prygreen);
+            font-size: 12px;
+            padding: 0px 15px;
+            margin-top: -30px;
+            margin-right: 25px;
+            align-self: flex-end;
+            z-index: 10;
+            letter-spacing: 2px;
+        }
+    
+} */
+
+
+
+@media screen and (min-width: 376px) {
+    body {
+        height: 100vh;
+    }
+
+    .advice {
+        width: 500px;
+        padding: 25px 25px 50px;
+    }
+
+    /* .advice__text::after {
+        content: url('images/pattern-divider-desktop.svg');
+        display: block;
+    } */
+
+    .advice h2 + img:first-of-type {
+        display: none;
+    }
+
+    /* .advice img:last-of-type {
+        display: block;
+    } */
+
+    .advice h2 + img + img:last-of-type {
+        display: block;
+    }
+
+    .advice__dice {
+        left: 225px;
+    }
+
+    .advice__dice:hover {
+        box-shadow: 0px 0px 20px 5px hsl(150, 100%, 66%, 0.7);
+        
+    }
+
+    .attribution {
+        margin-top: 100px;
+    }
+
+    .credit {
+        color: var(--prygreen);
+        font-size: 12px;
+        padding: 0px 15px;
+        margin-top: -30px;
+        margin-right: 25px;
+        align-self: flex-end;
+        z-index: 10;
+        letter-spacing: 2px;
+    }
+
+    
+}
