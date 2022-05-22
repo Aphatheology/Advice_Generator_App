@@ -100,11 +100,17 @@ body {
     border: none;
     border-radius: 5px;
     background-color: var(--prygreen);
-    color: rgb(56, 55, 55);
-    font-weight: 500;
+    color: var(--neudarkblue);
+    font-weight: 700;
     font-size: 16px;
     margin-top: 50px;
     padding: 15px 25px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.download:hover {
+    border: 2px solid white;
 }
 
 .attribution {
